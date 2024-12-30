@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100..700&display=swap');
+
+* {
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    padding: 0px;
+}
+
+.header-part {
+    width: 100vw;
+    overflow: hidden;
+    height: 700px;
+    background-image: url(images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -8px;
+    margin-left: -8px;
+    padding: 50px 200px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Alata;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.nav__block li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav__block li hr {
+    opacity: 0;
+    height: 2px;
+    background-color: white;
+    border: none;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.nav__block li a:hover hr {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.header-part__text {
+    padding: 50px;
+    margin-top: 100px;
+    width: 800px;
+    height: 350px;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.header-part__text p {
+    color: white;
+    font-weight: 300;
+    font-family: Josefin Sans;
+    font-size: 90px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 150px 300px 0 300px;
+    max-height: 650px;
+}
+
+.section__textBlock {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    bottom: 350px;
+    left: 550px;
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    padding: 20px 80px;
+    box-sizing: border-box;
+}
+
+.section__textBlock h2 {
+    color: black;
+    font-size: 60px;
+    font-family: Josefin Sans;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 75px;
+}
+
+.section__textBlock p {
+    color: hsl(0, 0%, 55%);
+    font-family: Josefin Sans;
+    line-height: 25px;
+}
+
+main {
+    padding: 0px 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.main__head h2 {
+    font-size: 50px;
+    font-family: Josefin Sans;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.main__head__button {
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-family: Alata;
+    font-weight: 400;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease;
+}
+
+.main__head__button:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+.creations {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.creation {
+    position: relative;
+    max-width: 300px;
+    height: 530px;
+    cursor: pointer;
+}
+
+.creation::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 300px;
+    height: 528px;
+    background-color: hsl(0, 0%, 90%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.creation:hover::after {
+    opacity: 0.5;
+} 
+
+.creation img {
+    width: 300px;
+}
+
+.creation h3 {
+    width: 270px;
+    position: relative;
+    bottom: 150px;
+    left: 20px;
+    font-size: 45px;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+}
+
+footer {
+    position: relative;
+    bottom: -20px;
+    width: 100vw;
+    margin-top: 100px;
+    margin-left: -10px;
+    background-color:hsl(0, 0%, 0%);
+    display: flex;
+    padding: 30px 80px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+footer .nav__block {
+    margin-top: 25px;
+    padding-left: 0;
+    gap: 20px;
+}
+
+footer .nav__block a {
+    font-size: 18px;
+}
+
+
+.footer__info__media {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__info__media a hr {
+    opacity: 1;
+    height: 2px;
+    background-color: white;
+    border: none;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.footer__info__media a:hover hr {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.footer__info__text {
+    color: hsl(0, 0%, 55%);
+    font-family: Josefin Sans;
+}
+
+.creation__smallIMG {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.bigButton {
+    display: none;
+}
+
+@media (max-width: 1500px) {
+    .creations {
+        gap: 100px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    .section__textBlock h2 {
+        font-size: 45px;
+    }
+    .section__textBlock {
+        width: 600px;
+    }
+    section {
+        padding: 150px 100px 0 200px;
+    }
+}
+
+@media (max-width: 1300px) {
+    * {
+        font-size: 18px;
+    }
+    main {
+        margin-top: 300px;
+        padding: 50px;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 100px 0 0 0;
+      }
+    .section__textBlock {
+        display: block;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        width: 700px;
+    }
+    .main__head__button {
+        margin-left: 50px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-part {
+        background-image: url(images/mobile/image-hero.jpg);
+        background-position: 20% 15%;
+        padding: 50px 100px;
+        height: 650px;
+    }
+    .header-part .nav__block  {
+        display: none;
+    }
+
+    .header-part__text {
+        padding: 20px;
+        margin-top: 100px;
+        width: 520px;
+        height: 225px;
+        border: 3px solid white;
+        box-sizing: border-box;
+      }
+
+      .hamburger {
+        display: inline-block;
+        border: none;
+        background-color:hsla(0, 0%, 100%, 0);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+
+      .hamburger hr {
+        width: 50px;
+        height: 3px;
+        background-color: hsl(0, 0%, 100%);
+        transform: scale(1.0);
+        transition: transform 0.3s ease;
+      }
+
+      .hamburger:hover hr {
+        transform: scale(1.2);
+      }
+
+    .header-part__text p {
+        font-size: 55px;
+    }
+
+    .section__textBlock {
+        text-align: center;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__main__logo {
+        margin-left: 100px;
+    }
+    .nav__block--hidden {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 150px 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-color: hsl(0, 0%, 0%);
+        box-sizing: border-box;
+    }
+    .nav__block__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav__block--hidden .nav__block {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 60px;
+    }
+    .nav__block--hidden .nav__block a {
+        font-size: 40px;
+    }
+    .closeButton {
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff00;
+        border: none;
+        cursor: pointer;
+    }
+    .closeButton hr {
+        height: 3px;
+        background-color:hsl(0, 0%, 100%);
+        border: none;
+        transform: rotate(45deg);
+    }
+    .closeButton .left {
+        transform: rotate(-45deg);
+        margin-top: -12px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .vr-img {
+        width: 500px;
+        height: 300px;
+    }
+    .vr-img img {
+        width: 500px;
+        height: 300px;
+    }
+    main {
+        margin-top: 100px;
+    }
+    .creations {
+        gap: 100px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main__head {
+        display: block;
+        text-align: center;
+    }
+    .main__head__button {
+        display: none;
+    }
+    .creations {
+        gap: 30px;
+    }
+    .creation {
+        width: 400px;
+        height: 110px;
+    }
+    .creation__bigIMG {
+        display: none;
+    }
+    .creation__smallIMG {
+        display: block;
+    }
+    .creation::after {
+        width: 300px;
+        height: 110px;
+    }
+    .creation h3 {
+        font-size: 40px;
+    }
+    .header-part__text {
+        width: 320px;
+        height: 325px;
+        margin-top: 40px;
+    }
+    .header-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header {
+        width: 100%;
+    }
+    .header-part__text p {
+        font-size: 40px;
+    }
+    .bigButton {
+        display: block;
+        width: 300px;
+        height: 110px;
+        margin-left: 0;
+    }
+    .section__textBlock {
+        width: 400px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .vr-img {
+        width: 300px;
+        height: 200px;
+    }
+    .vr-img img {
+        width: 300px;
+        height: 200px;
+    }
+    main {
+        margin-top: 10px;
+    }
+    footer .nav__block {
+        flex-direction: column;
+    }
+    .footer__main__logo {
+        margin-left: 0;
+    }
+    .section__textBlock {
+        width: 300px;
+    }
+    .section__textBlock h2 {
+        font-size: 35px;
+        line-height: 55px;
+    }
+    .header__logo {
+        width: 120px;
+    }
+    .header__logo img {
+        width: 120px;
+    }
+    .main__head h2 {
+        font-size: 35px;
+    }
+    .hamburger {
+        margin-left: 20px;
+    }
+}
